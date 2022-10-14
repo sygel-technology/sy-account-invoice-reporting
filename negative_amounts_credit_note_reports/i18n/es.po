@@ -1,0 +1,88 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* negative_amounts_credit_note_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-14 12:40+0000\n"
+"PO-Revision-Date: 2022-10-14 12:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: negative_amounts_credit_note_reports
+#: model:ir.model,name:negative_amounts_credit_note_reports.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: negative_amounts_credit_note_reports
+#: model:ir.model,name:negative_amounts_credit_note_reports.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: negative_amounts_credit_note_reports
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_account_move__display_name
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_res_company__display_name
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: negative_amounts_credit_note_reports
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_account_move__id
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_res_company__id
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: negative_amounts_credit_note_reports
+#: model:ir.model,name:negative_amounts_credit_note_reports.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: negative_amounts_credit_note_reports
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_account_move____last_update
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_res_company____last_update
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: negative_amounts_credit_note_reports
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_account_bank_statement_line__negative_amounts_credit_note
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_account_move__negative_amounts_credit_note
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_account_payment__negative_amounts_credit_note
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_res_company__negative_amounts_credit_note
+#: model:ir.model.fields,field_description:negative_amounts_credit_note_reports.field_res_config_settings__negative_amounts_credit_note
+msgid "Show negative amounts in credit note reports."
+msgstr "Mostrar importes negativos en las Facturas Rectificativas impresas."
+
+#. module: negative_amounts_credit_note_reports
+#: model:ir.model.fields,help:negative_amounts_credit_note_reports.field_account_bank_statement_line__negative_amounts_credit_note
+#: model:ir.model.fields,help:negative_amounts_credit_note_reports.field_account_move__negative_amounts_credit_note
+#: model:ir.model.fields,help:negative_amounts_credit_note_reports.field_account_payment__negative_amounts_credit_note
+#: model:ir.model.fields,help:negative_amounts_credit_note_reports.field_res_company__negative_amounts_credit_note
+#: model:ir.model.fields,help:negative_amounts_credit_note_reports.field_res_config_settings__negative_amounts_credit_note
+msgid ""
+"Shows the negative amounts in the Credit Notes reports. By default, the "
+"amounts are positive."
+msgstr ""
+"Muestra los importes negativos en las facturas rectificativas impresas. Por defecto, los "
+"importes son positivos."
+
+#. module: negative_amounts_credit_note_reports
+#: model_terms:ir.ui.view,arch_db:negative_amounts_credit_note_reports.negative_amounts_credit_note_reports_res_config_settings_view_form
+msgid ""
+"Shows the negative amounts in the Credit Notes reports. By default, the "
+"amounts are positive."
+msgstr ""
+"Muestra los importes negativos en las facturas rectificativas impresas. Por defecto, los "
+"importes son positivos."
+
+#. module: negative_amounts_credit_note_reports
+#: model_terms:ir.ui.view,arch_db:negative_amounts_credit_note_reports.negative_amounts_credit_note_reports_invoice_document
+msgid "on"
+msgstr "de"
