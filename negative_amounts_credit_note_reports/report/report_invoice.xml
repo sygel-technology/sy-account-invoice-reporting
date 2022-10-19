@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022 Ángel García de la Chica Herrera <angel.garcia@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template id="negative_amounts_credit_note_reports_invoice_document" name="negative.amounts.credit.note.reports.invoice.document" inherit_id="account.report_invoice_document" >
+        <xpath expr="//div[1]/h2" position="before">
+            <t t-set="negative_symbol" t-value="o.move_type == 'out_refund' and o.company_id.negative_amounts_credit_note"/>
+        </xpath>
+        <xpath expr="//span[@t-field='line.price_subtotal']" position="before">
+            <span t-if="negative_symbol">-</span>
+        </xpath>
+        <xpath expr="//span[@t-esc='current_subtotal']" position="before">
+            <span t-if="negative_symbol">-</span>
+        </xpath>
+        <xpath expr="//span[@t-field='o.amount_untaxed']" position="before">
+            <span t-if="negative_symbol">-</span>
+        </xpath>
+        <xpath expr="//t[@t-as='payment_vals']/tr[1]/td[2]/span[1]" position="before">
+            <span t-if="negative_symbol">-</span>
+        </xpath>
+        <xpath expr="//span[@t-field='o.amount_total']" position="before">
+            <span t-if="negative_symbol">-</span>
+        </xpath>
+        <xpath expr="//span[@t-field='o.amount_residual']" position="before">
+            <span t-if="negative_symbol">-</span>
+        </xpath>
+        <xpath expr="//span[@t-esc='amount_by_group[3]']" position="before">
+            <span t-if="negative_symbol">-</span>
+        </xpath>
+        <xpath expr="//t[@t-as='amount_by_group']" position="attributes">
+            <attribute name="t-if">not negative_symbol</attribute>
+        </xpath>
+        <xpath expr="//t[@t-as='amount_by_group']" position="before">
+            <t t-foreach="o.amount_by_group" t-as="amount_by_group" t-if="negative_symbol">
+                <tr style="">
+                    <t t-if="len(o.line_ids.filtered(lambda line: line.tax_line_id)) in [0, 1] and float_compare(o.amount_untaxed, amount_by_group[2], precision_rounding=o.currency_id.rounding) == 0">
+                        <td><span class="text-nowrap" t-esc="amount_by_group[0]"/></td>
+                        <td class="text-right o_price_total">
+                            -<span class="text-nowrap" t-esc="amount_by_group[3]"/>
+                        </td>
+                    </t>
+                    <t t-else="">
+                        <td>
+                            <span t-esc="amount_by_group[0]"/>
+                            <span class="text-nowrap"> on
+                                <t t-esc="amount_by_group[4]"/>
+                            </span>
+                        </td>
+                        <td class="text-right o_price_total">
+                            -<span class="text-nowrap" t-esc="amount_by_group[3]"/>
+                        </td>
+                    </t>
+                </tr>
+            </t>
+        </xpath>
+     </template>
+</odoo>
