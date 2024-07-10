@@ -9,10 +9,7 @@ class AccountMove(models.Model):
 
     def lines_grouped_by_picking(self):
         res = super().lines_grouped_by_picking()
-        to_remove = list(filter(
-            lambda g: g['picking'].hide_on_invoice,
-            res
-        ))
+        to_remove = list(filter(lambda g: g["picking"].hide_on_invoice, res))
         for i in to_remove:
             res.remove(i)
         return res
