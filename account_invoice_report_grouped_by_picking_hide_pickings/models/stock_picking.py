@@ -8,6 +8,6 @@ class StockPicking(models.Model):
     _inherit = "stock.picking"
 
     hide_on_invoice = fields.Boolean(
-        string='Hide on Invoice',
+        string="Hide on Invoice",
         default=False,
     )
