@@ -6,14 +6,12 @@
     "summary": "Show/Hide price info in invoice PDF",
     "version": "15.0.1.0.0",
     "category": "Invoicing",
-    "website": "https://www.sygel.es",
+    "website": "https://github.com/sygel-technology/sy-account-invoice-reporting",
     "author": "Sygel",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        'account'
-    ],
+    "depends": ["account"],
     "data": [
         "views/account_move_views.xml",
         "report/report_invoice.xml",
