@@ -8,7 +8,6 @@ class AccountMove(models.Model):
     _inherit = "account.move"
 
     has_show_price_report_lines = fields.Boolean(
-        string="Has Show Price Report Lines",
         compute="_compute_has_show_price_report_lines",
     )
 
