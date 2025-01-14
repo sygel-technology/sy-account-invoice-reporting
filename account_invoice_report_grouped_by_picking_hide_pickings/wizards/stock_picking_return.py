@@ -7,12 +7,12 @@ class ReturnPicking(models.TransientModel):
     _inherit = "stock.return.picking"
 
     is_internal_return = fields.Boolean(
-        string="Is Internal Return",
+        string="It is Internal Return",
         default=False,
     )
 
     is_full_return = fields.Boolean(
-        string="Is Full Return", compute="_compute_is_full_return"
+        string="It is Full Return", compute="_compute_is_full_return"
     )
 
     @api.depends("product_return_moves", "product_return_moves.quantity")
