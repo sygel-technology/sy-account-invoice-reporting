@@ -24,12 +24,12 @@ msgstr "Ocultar en facturas"
 
 #. module: account_invoice_report_grouped_by_picking_hide_pickings
 #: model:ir.model.fields,field_description:account_invoice_report_grouped_by_picking_hide_pickings.field_stock_return_picking__is_full_return
-msgid "Is Full Return"
+msgid "It Is Full Return"
 msgstr "Es devolución completa"
 
 #. module: account_invoice_report_grouped_by_picking_hide_pickings
 #: model:ir.model.fields,field_description:account_invoice_report_grouped_by_picking_hide_pickings.field_stock_return_picking__is_internal_return
-msgid "Is Internal Return"
+msgid "It is Internal Return"
 msgstr "Es devolución interna"
 
 #. module: account_invoice_report_grouped_by_picking_hide_pickings
