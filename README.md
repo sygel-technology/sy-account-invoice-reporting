@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_invoice_report_grouped_by_picking_hide_pickings](account_invoice_report_grouped_by_picking_hide_pickings/) | 16.0.1.0.0 |  | Hide pickings on the account invoice report grouped by pickings
+[account_invoice_report_hide_discounts_by_partner](account_invoice_report_hide_discounts_by_partner/) | 16.0.1.0.0 |  | Account Invoice Report Hide Discounts by Partner
 [delete_payment_reference_invoice_report](delete_payment_reference_invoice_report/) | 16.0.1.0.0 |  | Delete payment reference from invoice reports
 
 [//]: # (end addons)
