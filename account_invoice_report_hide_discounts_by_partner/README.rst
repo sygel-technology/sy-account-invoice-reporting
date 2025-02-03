@@ -6,7 +6,10 @@
 Account Invoice Report Hide Discounts by Partner
 ================================================
 
-This module allows you to show the discounts on invoices if based on the partner.
+This module allows you to show the discounts on invoices based on the partner.
+
+In order not to show the discounts in the invoices, on the one hand hide the discount columns and 
+on the other hand recalculate the unit price including the discount.
 
 
 Installation
@@ -26,6 +29,12 @@ To configure this module, you need to:
 #. Create or Edit a parent contact
 #. Go to Invoicing tab
 #. Edit the 'Show discounts' field
+
+To configure unit price decimal precision to show the unit price with discounts:
+
+#. With developer permissions go to Technical settings. 
+#. Go to Decimal Accuracy.
+#. Set the decimal places you want to display in the unit price column of invoices.
 
 
 Usage

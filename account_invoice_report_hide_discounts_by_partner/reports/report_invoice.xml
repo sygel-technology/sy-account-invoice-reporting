@@ -13,5 +13,16 @@
                 <t t-set="display_discount" t-value="o.show_discounts" />
             </t>
         </xpath>
+        <xpath expr="//span[@t-field='line.price_unit']" position="attributes">
+            <attribute name="t-if">display_discount</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.price_unit']" position="after">
+            <span
+                groups="account.group_show_line_subtotals_tax_included,account.group_show_line_subtotals_tax_excluded"
+                t-if="not display_discount"
+                class="text-nowrap"
+                t-field="line.invoice_price_unit_with_discount"
+            />
+        </xpath>
     </template>
 </odoo>

@@ -7,11 +7,11 @@ from odoo import api, fields, models
 class Partner(models.Model):
     _inherit = "res.partner"
 
-    show_discounts = fields.Boolean(
+    show_invoice_discounts = fields.Boolean(
         default=False,
         string="Show Discounts in Invoices",
     )
 
     @api.model
     def _commercial_fields(self):
-        return super()._commercial_fields() + ["show_discounts"]
+        return super()._commercial_fields() + ["show_invoice_discounts"]
