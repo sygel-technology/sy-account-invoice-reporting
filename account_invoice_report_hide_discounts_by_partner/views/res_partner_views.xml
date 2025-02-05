@@ -15,7 +15,7 @@
             <xpath expr="//group[@name='accounting_entries']" position='after'>
                 <group>
                     <field
-                        name="show_discounts"
+                        name="show_invoice_discounts"
                         attrs="{'readonly': [('parent_id','!=',False)]}"
                     />
                 </group>
