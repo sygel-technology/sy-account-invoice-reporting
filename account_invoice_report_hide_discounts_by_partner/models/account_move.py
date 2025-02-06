@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
+from odoo.tools.float_utils import float_is_zero
 
 
 class AccountMove(models.Model):
@@ -35,10 +36,18 @@ class AccountMoveLine(models.Model):
     def _compute_unit_price_with_discounts(self):
         for sel in self:
             res = 0.0
-            if sel.env.user.has_group("account.group_show_line_subtotals_tax_included"):
-                res = sel.price_total / sel.quantity
-            elif sel.env.user.has_group(
-                "account.group_show_line_subtotals_tax_excluded"
+            if not float_is_zero(
+                sel.quantity,
+                precision_digits=self.env["decimal.precision"].precision_get(
+                    "Product Unit of Measure"
+                ),
             ):
-                res = sel.price_subtotal / sel.quantity
+                if sel.env.user.has_group(
+                    "account.group_show_line_subtotals_tax_included"
+                ):
+                    res = sel.price_total / sel.quantity
+                elif sel.env.user.has_group(
+                    "account.group_show_line_subtotals_tax_excluded"
+                ):
+                    res = sel.price_subtotal / sel.quantity
             sel.invoice_price_unit_with_discount = res
