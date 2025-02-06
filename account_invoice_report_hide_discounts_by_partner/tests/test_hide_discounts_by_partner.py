@@ -2,6 +2,7 @@
 # License AGPL-3 - See https://www.gnu.org/licenses/agpl-3.0
 
 from odoo.tests import tagged
+from odoo.tools.float_utils import float_is_zero
 
 from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 
@@ -92,4 +93,18 @@ class TestHideDiscountsByPartner(AccountTestInvoicingCommon):
             invoice.invoice_line_ids[0].invoice_price_unit_with_discount,
             invoice.invoice_line_ids[0].price_total
             / invoice.invoice_line_ids[0].quantity,
+        )
+
+    def test_quantity_is_zero(self):
+        invoice = self._create_invoice(
+            partner_id=self.partner1.id, taxes=self.tax_sale_a
+        )
+        invoice.invoice_line_ids[0].quantity = 0.00
+        self.assertTrue(
+            float_is_zero(
+                invoice.invoice_line_ids[0].invoice_price_unit_with_discount,
+                precision_digits=self.env["decimal.precision"].precision_get(
+                    "Product Unit of Measure"
+                ),
+            )
         )
