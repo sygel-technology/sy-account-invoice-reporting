@@ -4,7 +4,7 @@
 {
     "name": "Account Invoice Report Hide Discounts by Partner",
     "summary": "Account Invoice Report Hide Discounts by Partner",
-    "version": "16.0.1.1.0",
+    "version": "16.0.1.2.0",
     "category": "Accounting & Finance",
     "website": "https://github.com/sygel-technology/sy-account-invoice-reporting",
     "author": "Sygel, Odoo Community Association (OCA)",
