@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo-addon-account_invoice_report_grouped_by_picking_hide_pickings>=16.0dev,<16.1dev',
         'odoo-addon-account_invoice_report_hide_discounts_by_partner>=16.0dev,<16.1dev',
+        'odoo-addon-account_invoice_report_hide_triple_disc_by_partner>=16.0dev,<16.1dev',
         'odoo-addon-delete_payment_reference_invoice_report>=16.0dev,<16.1dev',
     ],
     classifiers=[
