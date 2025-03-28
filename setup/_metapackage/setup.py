@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for sygel-technology-sy-account-invoice-reporting Odoo addons",
     version=version,
     install_requires=[
+        'odoo-addon-account_invoice_report_commercial_address>=16.0dev,<16.1dev',
         'odoo-addon-account_invoice_report_grouped_by_picking_hide_pickings>=16.0dev,<16.1dev',
         'odoo-addon-account_invoice_report_hide_discounts_by_partner>=16.0dev,<16.1dev',
         'odoo-addon-account_invoice_report_hide_triple_disc_by_partner>=16.0dev,<16.1dev',

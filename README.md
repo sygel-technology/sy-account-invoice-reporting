@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[account_invoice_report_commercial_address](account_invoice_report_commercial_address/) | 16.0.1.0.0 |  | Add commercial address to invoice report
 [account_invoice_report_grouped_by_picking_hide_pickings](account_invoice_report_grouped_by_picking_hide_pickings/) | 16.0.1.0.0 |  | Hide pickings on the account invoice report grouped by pickings
 [account_invoice_report_hide_discounts_by_partner](account_invoice_report_hide_discounts_by_partner/) | 16.0.1.2.0 |  | Account Invoice Report Hide Discounts by Partner
 [account_invoice_report_hide_triple_disc_by_partner](account_invoice_report_hide_triple_disc_by_partner/) | 16.0.1.0.0 |  | Do not show triple discount in invoices
