@@ -10,4 +10,5 @@ class StockPicking(models.Model):
     hide_on_invoice = fields.Boolean(
         string="Hide on Invoice",
         default=False,
+        copy=False,
     )

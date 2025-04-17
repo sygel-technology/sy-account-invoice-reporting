@@ -6,9 +6,11 @@ from odoo import _, api, exceptions, fields, models
 class ReturnPicking(models.TransientModel):
     _inherit = "stock.return.picking"
 
-    is_internal_return = fields.Boolean(
-        string="It is Internal Return",
-        default=False,
+    hide_return_on_invoice = fields.Boolean(
+        string="Hide return on invoice report",
+        help="Marking this option will hide the return "
+        "and the returned pickings from the invoice report",
+        default=lambda self: self.env.company.hide_return_pickings_default,
     )
 
     is_full_return = fields.Boolean(
@@ -25,7 +27,7 @@ class ReturnPicking(models.TransientModel):
 
     def create_returns(self):
         res = super().create_returns()
-        if self.is_internal_return:
+        if self.hide_return_on_invoice:
             if self.is_full_return:
                 new_picking = self.env["stock.picking"].browse(res["res_id"])
                 (self.picking_id | new_picking).write({"hide_on_invoice": True})
