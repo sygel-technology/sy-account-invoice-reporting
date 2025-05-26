@@ -13,5 +13,9 @@
     "depends": [
         "account_invoice_report_grouped_by_picking",
     ],
-    "data": ["views/stock_picking_views.xml", "wizards/stock_picking_return_views.xml"],
+    "data": [
+        "views/res_config_settings_views.xml",
+        "views/stock_picking_views.xml",
+        "wizards/stock_picking_return_views.xml",
+    ],
 }
