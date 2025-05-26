@@ -3,7 +3,7 @@
 {
     "name": "Account Invoice Report Grouped By Picking Hide Pickings",
     "summary": "Hide pickings on the account invoice report grouped by pickings",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "category": "Accounting & Finance",
     "website": "https://github.com/sygel-technology/sy-account-invoice-reporting",
     "author": "Sygel, Odoo Community Association (OCA)",
