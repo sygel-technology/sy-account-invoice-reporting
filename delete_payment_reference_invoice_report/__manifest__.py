@@ -4,7 +4,7 @@
 {
     "name": "Delete payment reference from invoice reports",
     "summary": "Delete payment reference from invoice reports",
-    "version": "17.0.1.0.0",
+    "version": "18.0.1.0.0",
     "category": "Custom",
     "website": "https://github.com/sygel-technology/sy-account-invoice-reporting",
     "author": "Sygel, Odoo Community Association (OCA)",
