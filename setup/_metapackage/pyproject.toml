@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-sygel-technology-sy-account-invoice-reporting"
+version = "18.0.20250630.0"
+dependencies = [
+    "odoo-addon-delete_payment_reference_invoice_report==18.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 18.0",
+]

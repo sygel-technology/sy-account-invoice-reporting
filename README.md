@@ -16,6 +16,13 @@ Odoo Invoicing reports
 <!-- prettier-ignore-start -->
 
 [//]: # (addons)
+
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[delete_payment_reference_invoice_report](delete_payment_reference_invoice_report/) | 18.0.1.0.0 |  | Delete payment reference from invoice reports
+
 [//]: # (end addons)
 
 <!-- prettier-ignore-end -->
