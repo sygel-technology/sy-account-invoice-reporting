@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="tax_totals_move_discount_before_total"
+        inherit_id="account.document_tax_totals_template"
+    >
+        <xpath expr="//tr[contains(@class, 'o_total')]" position="before">
+            <t t-if="o and o._name == 'account.move' and o.discount_total">
+                <tr class="border-black">
+                    <td><strong>Total without discount</strong></td>
+                    <td class="text-end">
+                        <span t-field="o.price_total_no_discount" />
+                    </td>
+                </tr>
+                <tr class="border-black">
+                    <td><strong>Discount</strong></td>
+                    <td class="text-end">
+                        <span t-field="o.discount_total" />
+                    </td>
+                </tr>
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="disable_old_invoice_discount_rows"
+        inherit_id="account.report_invoice_document"
+    >
+        <xpath
+            expr="//span[@t-field='o.discount_total']/ancestor::tr[1]"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath
+            expr="//span[@t-field='o.price_total_no_discount']/ancestor::tr[1]"
+            position="attributes"
+        >
+            <attribute name="t-if">False</attribute>
+        </xpath>
+    </template>
+</odoo>
