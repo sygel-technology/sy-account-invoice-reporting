@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[account_invoice_report_discount_total_reorder](account_invoice_report_discount_total_reorder/) | 17.0.1.0.0 |  | Reorders discount totals in Invoice reports.
 [account_invoice_report_shipping_ref](account_invoice_report_shipping_ref/) | 17.0.1.0.0 |  | Shows delivery address reference on report invoice
 [delete_payment_reference_invoice_report](delete_payment_reference_invoice_report/) | 17.0.1.0.0 |  | Delete payment reference from invoice reports
 

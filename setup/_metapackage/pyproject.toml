@@ -1,7 +1,8 @@
 [project]
 name = "odoo-addons-sygel-technology-sy-account-invoice-reporting"
-version = "17.0.20250527.0"
+version = "17.0.20260323.0"
 dependencies = [
+    "odoo-addon-account_invoice_report_discount_total_reorder>=17.0dev,<17.1dev",
     "odoo-addon-account_invoice_report_shipping_ref>=17.0dev,<17.1dev",
     "odoo-addon-delete_payment_reference_invoice_report>=17.0dev,<17.1dev",
 ]
