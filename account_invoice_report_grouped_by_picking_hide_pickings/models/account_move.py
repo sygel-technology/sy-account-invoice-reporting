@@ -54,12 +54,8 @@ class AccountMove(models.Model):
         res = super().lines_grouped_by_picking()
         to_remove = list(filter(lambda g: g["picking"].hide_on_invoice, res))
         if to_remove:
-            if to_remove == res:
-                res = []
-            else:
-                for line in to_remove:
-                    # Remove hidden pickings
-                    res.remove(line)
-                if self.env.company.hide_pickings_update_qty:
-                    res = self._update_lines_grouped_by_picking(res, to_remove)
+            for line in to_remove:
+                res.remove(line)
+            if self.env.company.hide_pickings_update_qty:
+                res = self._update_lines_grouped_by_picking(res, to_remove)
         return res

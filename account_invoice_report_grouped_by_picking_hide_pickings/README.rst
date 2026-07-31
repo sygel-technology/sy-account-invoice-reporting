@@ -17,7 +17,7 @@ Account Invoice Report Grouped By Picking Hide Pickings
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-sygel--technology%2Fsy--account--invoice--reporting-lightgray.png?logo=github
-    :target: https://github.com/sygel-technology/sy-account-invoice-reporting/tree/16.0/account_invoice_report_grouped_by_picking_hide_pickings
+    :target: https://github.com/sygel-technology/sy-account-invoice-reporting/tree/18.0/account_invoice_report_grouped_by_picking_hide_pickings
     :alt: sygel-technology/sy-account-invoice-reporting
 
 |badge1| |badge2| |badge3|
@@ -25,9 +25,9 @@ Account Invoice Report Grouped By Picking Hide Pickings
 This module allows to hide pickings on the account invoice report
 grouped by pickings.
 
-This module is intentended to use to hide unnecesary lines of the
-report, for example the internal picking returns, the total amount of
-the invoice is not changed.
+This module is intended to use to hide unnecessary lines of the report,
+for example the internal picking returns, the total amount of the
+invoice is not changed.
 
 **Table of contents**
 
@@ -53,7 +53,7 @@ To use this module, you need to:
    correction.
 2. Go to a delivery picking form.
 3. Click the return button, mark the 'is internal return check', and
-   make a full return. If you dont return all the moves of the picking,
+   make a full return. If you don't return all the moves of the picking,
    an error will be shown.
 4. Edit the sales order, and generate a correct final delivery
 5. Generate the invoice of the sales order, and print its report. See
@@ -62,7 +62,7 @@ To use this module, you need to:
    hide going to: Picking Form / Additional Info / Hide on Invoice.
    Remember that the selected pickings will be hidden but the total
    amount of the report won't be changed, the base module adds the
-   remaning quantities as lines without picking.
+   remaining quantities as lines without picking.
 
 Bug Tracker
 ===========
@@ -70,7 +70,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/sygel-technology/sy-account-invoice-reporting/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/sygel-technology/sy-account-invoice-reporting/issues/new?body=module:%20account_invoice_report_grouped_by_picking_hide_pickings%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/sygel-technology/sy-account-invoice-reporting/issues/new?body=module:%20account_invoice_report_grouped_by_picking_hide_pickings%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -94,6 +94,6 @@ Contributors
 Maintainers
 -----------
 
-This module is part of the `sygel-technology/sy-account-invoice-reporting <https://github.com/sygel-technology/sy-account-invoice-reporting/tree/16.0/account_invoice_report_grouped_by_picking_hide_pickings>`_ project on GitHub.
+This module is part of the `sygel-technology/sy-account-invoice-reporting <https://github.com/sygel-technology/sy-account-invoice-reporting/tree/18.0/account_invoice_report_grouped_by_picking_hide_pickings>`_ project on GitHub.
 
 You are welcome to contribute.

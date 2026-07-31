@@ -19,20 +19,25 @@ class ReturnPicking(models.TransientModel):
 
     @api.depends("product_return_moves", "product_return_moves.quantity")
     def _compute_is_full_return(self):
-        self.is_full_return = len(self.picking_id.move_ids) == len(
-            self.product_return_moves
-        ) and False not in self.product_return_moves.mapped(
-            lambda m: m.move_id and m.quantity == m.move_id.quantity_done
-        )
+        for wizard in self:
+            picking_moves = wizard.picking_id.move_ids.filtered(
+                lambda move: move.state != "cancel"
+            )
+            wizard.is_full_return = len(picking_moves) == len(
+                wizard.product_return_moves
+            ) and all(
+                return_move.move_id
+                and return_move.quantity == return_move.move_id.quantity
+                for return_move in wizard.product_return_moves
+            )
 
-    def create_returns(self):
-        res = super().create_returns()
+    def action_create_returns(self):
+        if self.hide_return_on_invoice and not self.is_full_return:
+            raise exceptions.ValidationError(
+                _("You can only mark full returns as internal")
+            )
+        res = super().action_create_returns()
         if self.hide_return_on_invoice:
-            if self.is_full_return:
-                new_picking = self.env["stock.picking"].browse(res["res_id"])
-                (self.picking_id | new_picking).write({"hide_on_invoice": True})
-            else:
-                raise exceptions.ValidationError(
-                    _("You can only mark full returns as internal")
-                )
+            new_picking = self.env["stock.picking"].browse(res["res_id"])
+            (self.picking_id | new_picking).write({"hide_on_invoice": True})
         return res
