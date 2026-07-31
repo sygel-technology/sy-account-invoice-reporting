@@ -17,7 +17,7 @@ Account Invoice Report Commercial Address
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-sygel--technology%2Fsy--account--invoice--reporting-lightgray.png?logo=github
-    :target: https://github.com/sygel-technology/sy-account-invoice-reporting/tree/16.0/account_invoice_report_commercial_address
+    :target: https://github.com/sygel-technology/sy-account-invoice-reporting/tree/18.0/account_invoice_report_commercial_address
     :alt: sygel-technology/sy-account-invoice-reporting
 
 |badge1| |badge2| |badge3|
@@ -40,10 +40,11 @@ Configuration
 
 Default Settings
 
-- The 'Show Commercial Entity' option is enabled in the account.move
-  model when the partner differs from its commercial entity"
-- The commercial address displayed corresponds to the parent address of
-  the company.
+- The Show Commercial Entity field is automatically enabled on the
+  invoice when the selected billing contact differs from its commercial
+  entity.
+- The commercial address displayed corresponds to the address of the
+  billing contact’s commercial entity or parent company.
 
 Usage
 =====
@@ -54,13 +55,16 @@ Locate the Setting
 
 Toggle the Checkbox
 
-- You will see a checkbox labeled "Show Commercial Entity." This field
-  is not active by default. It will be automatically activated or
-  deactivated depending on whether the partner differs from its
-  commercial entity.
-- When active, the invoice will display the commercial address (the
-  parent company’s address) near the invoice subtotal, in addition to
-  the usual billing contact address.
+- You will see a checkbox labeled Show Commercial Entity. Its value is
+  automatically determined according to whether the selected billing
+  contact differs from its commercial entity. The checkbox is
+  automatically enabled when the selected billing contact differs from
+  its commercial entity and disabled when the commercial entity itself
+  is selected.The automatically assigned value can be manually changed
+  for a specific invoice.
+- When enabled, the invoice PDF displays the commercial entity’s address
+  near the invoice subtotal, in addition to the standard billing contact
+  address.
 - For a particular invoice, if you do not want to display the commercial
   address—even when a different billing address is set—you can manually
   change this option.
@@ -71,7 +75,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/sygel-technology/sy-account-invoice-reporting/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/sygel-technology/sy-account-invoice-reporting/issues/new?body=module:%20account_invoice_report_commercial_address%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/sygel-technology/sy-account-invoice-reporting/issues/new?body=module:%20account_invoice_report_commercial_address%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -86,13 +90,16 @@ Authors
 Contributors
 ------------
 
-- Ángel Rivas <angel.rivas@sygel.es>
-- Manuel Regidor <manuel.regidor@sygel.es>
-- Valentín Vinagre <valentin.vinagre@sygel.es>
+- `Sygel <https://www.sygel.es>`__:
+
+  - Ángel Rivas
+  - Manuel Regidor
+  - Valentín Vinagre
+  - Harald Panten
 
 Maintainers
 -----------
 
-This module is part of the `sygel-technology/sy-account-invoice-reporting <https://github.com/sygel-technology/sy-account-invoice-reporting/tree/16.0/account_invoice_report_commercial_address>`_ project on GitHub.
+This module is part of the `sygel-technology/sy-account-invoice-reporting <https://github.com/sygel-technology/sy-account-invoice-reporting/tree/18.0/account_invoice_report_commercial_address>`_ project on GitHub.
 
 You are welcome to contribute.

@@ -1,3 +1,5 @@
-- Ángel Rivas \<angel.rivas@sygel.es\>
-- Manuel Regidor \<manuel.regidor@sygel.es\>
-- Valentín Vinagre \<valentin.vinagre@sygel.es\>
+- [Sygel](https://www.sygel.es):
+  - Ángel Rivas
+  - Manuel Regidor
+  - Valentín Vinagre
+  - Harald Panten
