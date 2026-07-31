@@ -10,7 +10,7 @@ from odoo.addons.account.tests.common import AccountTestInvoicingCommon
 class TestAccountInvoiceReportCommercialAddress(AccountTestInvoicingCommon):
     @classmethod
     def setUpClass(cls):
-        super(TestAccountInvoiceReportCommercialAddress, cls).setUpClass()
+        super().setUpClass()
 
         cls.partner_id = cls.env["res.partner"].create(
             {
