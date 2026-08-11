@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Ángel Rivas <angel.rivas@sygel.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <template
+        id="account_invoice_report_commercial_address_report_invoice_document"
+        name="account.invoice.report.commercial.address.report.invoice.document"
+        inherit_id="account.report_invoice_document"
+    >
+        <xpath expr="//div[@id='payment_term']/div[p[@name='note']]" position="before">
+            <div t-if="o.show_commercial_entity" class="commercial-address mb-3 small">
+                <address
+                    class="mb-0"
+                    t-field="o.partner_id.commercial_partner_id"
+                    t-options='{
+                        "widget": "contact",
+                        "fields": ["name", "address"]
+                    }'
+                />
+            </div>
+        </xpath>
+    </template>
+</odoo>

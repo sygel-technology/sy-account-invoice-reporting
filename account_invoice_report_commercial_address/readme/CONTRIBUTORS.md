@@ -1,0 +1,5 @@
+- [Sygel](https://www.sygel.es):
+  - Ángel Rivas
+  - Manuel Regidor
+  - Valentín Vinagre
+  - Harald Panten
