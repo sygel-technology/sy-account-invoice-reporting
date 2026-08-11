@@ -1,7 +1,8 @@
 [project]
 name = "odoo-addons-sygel-technology-sy-account-invoice-reporting"
-version = "18.0.20250630.0"
+version = "18.0.20260811.0"
 dependencies = [
+    "odoo-addon-account_invoice_report_commercial_address==18.0.*",
     "odoo-addon-delete_payment_reference_invoice_report==18.0.*",
 ]
 classifiers=[

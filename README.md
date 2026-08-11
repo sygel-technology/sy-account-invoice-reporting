@@ -21,6 +21,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[account_invoice_report_commercial_address](account_invoice_report_commercial_address/) | 18.0.1.0.0 |  | Add commercial address to invoice report
 [delete_payment_reference_invoice_report](delete_payment_reference_invoice_report/) | 18.0.1.0.0 |  | Delete payment reference from invoice reports
 
 [//]: # (end addons)
