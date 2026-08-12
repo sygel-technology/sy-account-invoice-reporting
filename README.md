@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [account_invoice_report_commercial_address](account_invoice_report_commercial_address/) | 18.0.1.0.0 |  | Add commercial address to invoice report
+[account_invoice_report_grouped_by_picking_hide_pickings](account_invoice_report_grouped_by_picking_hide_pickings/) | 18.0.1.1.0 |  | Hide pickings on the account invoice report grouped by pickings
 [delete_payment_reference_invoice_report](delete_payment_reference_invoice_report/) | 18.0.1.0.0 |  | Delete payment reference from invoice reports
 
 [//]: # (end addons)
