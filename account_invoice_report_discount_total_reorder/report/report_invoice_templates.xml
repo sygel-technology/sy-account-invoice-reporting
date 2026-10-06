@@ -4,7 +4,10 @@
         id="tax_totals_move_discount_before_total"
         inherit_id="account.document_tax_totals_template"
     >
-        <xpath expr="//tr[contains(@class, 'o_total')]" position="before">
+        <xpath
+            expr="//strong[@t-out=&quot;tax_totals['total_amount_currency']&quot;]/../.."
+            position="before"
+        >
             <t t-if="o and o._name == 'account.move' and o.discount_total">
                 <tr class="border-black">
                     <td>
@@ -28,18 +31,9 @@
 
     <template
         id="disable_old_invoice_discount_rows"
-        inherit_id="account.report_invoice_document"
+        inherit_id="account_invoice_discount_display_amount.invoice_discount_display_amount_document"
     >
-        <xpath
-            expr="//span[@t-field='o.discount_total']/ancestor::tr[1]"
-            position="attributes"
-        >
-            <attribute name="t-if">False</attribute>
-        </xpath>
-        <xpath
-            expr="//span[@t-field='o.price_total_no_discount']/ancestor::tr[1]"
-            position="attributes"
-        >
+        <xpath expr="//td[@name='td_discount_total_label']/.." position="attributes">
             <attribute name="t-if">False</attribute>
         </xpath>
     </template>
