@@ -7,13 +7,17 @@
         <xpath expr="//tr[contains(@class, 'o_total')]" position="before">
             <t t-if="o and o._name == 'account.move' and o.discount_total">
                 <tr class="border-black">
-                    <td><strong>Total without discount</strong></td>
+                    <td>
+                        <strong>Total without discount</strong>
+                    </td>
                     <td class="text-end">
                         <span t-field="o.price_total_no_discount" />
                     </td>
                 </tr>
                 <tr class="border-black">
-                    <td><strong>Discount</strong></td>
+                    <td>
+                        <strong>Discount</strong>
+                    </td>
                     <td class="text-end">
                         <span t-field="o.discount_total" />
                     </td>
